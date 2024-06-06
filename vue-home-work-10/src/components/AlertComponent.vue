@@ -15,7 +15,7 @@ export default {
       type: String,
       default: 'success',
       required: true,
-      computed: (value) => {
+      validator: (value) => {
         return ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'].includes(value)
       }
     }
