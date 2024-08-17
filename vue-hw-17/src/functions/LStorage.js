@@ -42,19 +42,6 @@ class LStorage {
 
     return removedItem;
   }
-
-  changeItemStatus({ id, status }) {
-    this.changeItemField(id, "status", status);
-  }
-
-  changeItemField(id, field, value) {
-    const data = this.getItems();
-    const index = this.getItemIndexById(id);
-    const currentEl = data[index];
-    currentEl[field] = value;
-    localStorage.setItem(this.key, JSON.stringify(data));
-    return currentEl;
-  }
 }
 
 const storage = new LStorage();
